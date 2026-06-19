@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="site_title">Rafael Gálvez Silipo — Auditoría & Desarrollo Web</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="grid-overlay"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 19 2 12 11 5 11 19"/><polygon points="22 19 13 12 22 5 22 19"/></svg>
+      RBYHACK
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="services.html" data-i18n="nav_services">Servicios</a></li>
+      <li><a href="process.html" data-i18n="nav_process">Proceso</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:0.5rem;">
+      <div class="lang-switcher">
+        <button data-lang="es" class="active">ES</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+    <section class="section" style="padding-top:6rem;">
+      <p class="section-label fade-in" data-i18n="section_contact_label">Contacto</p>
+      <h1 class="section-title fade-in" data-i18n="section_contact_title">Hablemos</h1>
+      <p class="section-subtitle fade-in" data-i18n="section_contact_subtitle">Cuéntame sobre tu proyecto y estaré encantado de ayudarte a alcanzar tus objetivos digitales.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item fade-in-left delay-1">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div class="contact-item-info">
+              <h4 data-i18n="contact_email_label">Email</h4>
+              <p data-i18n="contact_email_value">Disponible vía LinkedIn</p>
+            </div>
+          </div>
+
+          <div class="contact-item fade-in-left delay-2">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-item-info">
+              <h4 data-i18n="contact_location_label">Ubicación</h4>
+              <p data-i18n="contact_location_value">Málaga, Andalucía, España</p>
+            </div>
+          </div>
+
+          <div class="contact-item fade-in-left delay-3">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/><path d="M12 2a15.3 15.3 0 0 0-4 10 15.3 15.3 0 0 0 4 10"/></svg>
+            </div>
+            <div class="contact-item-info">
+              <h4 data-i18n="contact_profiles_label">Perfiles</h4>
+              <p>
+                <a href="https://github.com/Ruby570bocadito" target="_blank">GitHub</a>
+                &nbsp;&middot;&nbsp;
+                <a href="#">LinkedIn</a>
+                &nbsp;&middot;&nbsp;
+                <a href="https://github.com/Ruby570bocadito/Biblioteca-del-Pentesting" target="_blank">CiberApuntes</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item fade-in-left delay-4" style="margin-top:0.5rem;flex-direction:column;">
+            <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;">
+              ¿Necesitas auditar tu sitio web? ¿Quieres crear uno desde cero? ¿O simplemente optimizar el que ya tienes? Estaré encantado de escucharte y encontrar la mejor solución para tu caso.
+            </p>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form fade-in-right delay-2">
+          <div class="form-group">
+            <label for="name" data-i18n="form_name">Nombre</label>
+            <input type="text" id="name" data-i18n-placeholder="form_name" placeholder="Nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email" data-i18n="form_email">Email</label>
+            <input type="email" id="email" data-i18n-placeholder="form_email" placeholder="Email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="service" data-i18n="form_service">Servicio de interés</label>
+            <select id="service" required>
+              <option value="" data-i18n="form_service_default">Selecciona una opción...</option>
+              <option value="audit" data-i18n="form_service_audit">Auditoría Web</option>
+              <option value="dev" data-i18n="form_service_dev">Desarrollo Web</option>
+              <option value="consulting" data-i18n="form_service_consulting">Optimización & Consultoría</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message" data-i18n="form_message">Cuéntame sobre tu proyecto...</label>
+            <textarea id="message" data-i18n-placeholder="form_message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary" data-text="Send message" data-i18n="form_submit">Enviar mensaje</button>
+            <span class="form-success">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="form_success">Mensaje enviado. Gracias por contactarme.</span>
+            </span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="footer_home">Inicio</a></li>
+        <li><a href="services.html" data-i18n="footer_services">Servicios</a></li>
+        <li><a href="contact.html" data-i18n="footer_contact">Contacto</a></li>
+      </ul>
+      <p>&copy; <span id="year"></span> RBYHACK. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    I18n.init();
+  </script>
+</body>
+</html>

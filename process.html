@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="site_title">Rafael Gálvez Silipo — Auditoría & Desarrollo Web</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="grid-overlay"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 19 2 12 11 5 11 19"/><polygon points="22 19 13 12 22 5 22 19"/></svg>
+      RBYHACK
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="services.html" data-i18n="nav_services">Servicios</a></li>
+      <li><a href="process.html" data-i18n="nav_process">Proceso</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:0.5rem;">
+      <div class="lang-switcher">
+        <button data-lang="es" class="active">ES</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+    <section class="section" style="padding-top:6rem;">
+      <p class="section-label fade-in" data-i18n="section_process_label">Metodología</p>
+      <h1 class="section-title fade-in" data-i18n="section_process_title">Cómo trabajo</h1>
+      <p class="section-subtitle fade-in" data-i18n="section_process_subtitle">Un proceso claro y estructurado para garantizar resultados de calidad en cada proyecto.</p>
+
+      <div class="steps-list">
+        <div class="step fade-in delay-1">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <h3 data-i18n="step_1_title">1. Descubrimiento</h3>
+            <p data-i18n="step_1_desc">Conversamos sobre tu proyecto, tus objetivos y las necesidades específicas de tu sitio web. Defino el alcance y establezco expectativas claras desde el primer momento.</p>
+          </div>
+        </div>
+        <div class="step-arrow fade-in delay-1">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+
+        <div class="step fade-in delay-2">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <h3 data-i18n="step_2_title">2. Diagnóstico</h3>
+            <p data-i18n="step_2_desc">Realizo un análisis técnico exhaustivo de tu sitio actual o del mercado en el que quieres posicionarte. Identifico áreas de mejora y oportunidades concretas.</p>
+          </div>
+        </div>
+        <div class="step-arrow fade-in delay-2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+
+        <div class="step fade-in delay-3">
+          <div class="step-number">3</div>
+          <div class="step-body">
+            <h3 data-i18n="step_3_title">3. Propuesta</h3>
+            <p data-i18n="step_3_desc">Te presento un plan de acción detallado con las tareas a realizar, tecnologías a utilizar y una estimación de tiempos. Sin sorpresas, todo por escrito.</p>
+          </div>
+        </div>
+        <div class="step-arrow fade-in delay-3">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+
+        <div class="step fade-in delay-4">
+          <div class="step-number">4</div>
+          <div class="step-body">
+            <h3 data-i18n="step_4_title">4. Implementación</h3>
+            <p data-i18n="step_4_desc">Desarrollo, optimizo o ajusto tu sitio web siguiendo las mejores prácticas. Te mantengo informado del progreso con actualizaciones periódicas.</p>
+          </div>
+        </div>
+        <div class="step-arrow fade-in delay-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+
+        <div class="step fade-in delay-5">
+          <div class="step-number">5</div>
+          <div class="step-body">
+            <h3 data-i18n="step_5_title">5. Revisión & Entrega</h3>
+            <p data-i18n="step_5_desc">Pruebas finales de rendimiento, accesibilidad y funcionamiento. Te entrego el proyecto con documentación y recomendaciones para mantenimiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="footer_home">Inicio</a></li>
+        <li><a href="services.html" data-i18n="footer_services">Servicios</a></li>
+        <li><a href="contact.html" data-i18n="footer_contact">Contacto</a></li>
+      </ul>
+      <p>&copy; <span id="year"></span> RBYHACK. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    I18n.init();
+  </script>
+</body>
+</html>
