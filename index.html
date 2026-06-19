@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Auditoría, desarrollo y optimización web. Sitios rápidos, accesibles y efectivos por Rafael Gálvez Silipo.">
   <title data-i18n="site_title">Rafael Gálvez Silipo — Auditoría & Desarrollo Web</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
   <div class="bg-gradient"></div>
   <div class="grid-overlay"></div>
+  <div class="cursor-glow"></div>
 
   <nav class="navbar">
     <a href="index.html" class="logo">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 19 2 12 11 5 11 19"/><polygon points="22 19 13 12 22 5 22 19"/></svg>
       RBYHACK
     </a>
-
     <ul class="nav-links">
       <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
       <li><a href="services.html" data-i18n="nav_services">Servicios</a></li>
       <li><a href="process.html" data-i18n="nav_process">Proceso</a></li>
+      <li><a href="about.html" data-i18n="nav_about">Sobre mí</a></li>
       <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
     </ul>
-
     <div style="display:flex;align-items:center;gap:0.5rem;">
       <div class="lang-switcher">
         <button data-lang="es" class="active">ES</button>
@@ -43,8 +45,8 @@
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><path d="M8 12l3 3 5-5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
       </p>
-      <h1 class="fade-in delay-1">
-        <span data-i18n="hero_title">Audito, creo y optimizo páginas web</span><span class="highlight">.</span>
+      <h1 class="fade-in delay-1" id="hero-typed" data-sanitize>
+        <span class="highlight">.</span>
       </h1>
       <p class="fade-in delay-2" data-i18n="hero_subtitle">Ayudo a negocios y profesionales a tener una presencia web rápida, accesible y efectiva. Diagnóstico técnico, desarrollo desde cero y optimización continua.</p>
       <div class="hero-cta fade-in delay-3">
@@ -53,15 +55,14 @@
       </div>
     </section>
 
-    <!-- ABOUT ME -->
+    <!-- ABOUT ME (compact) -->
     <section class="section">
       <p class="section-label fade-in" data-i18n="section_about_label">Sobre mí</p>
       <h2 class="section-title fade-in" data-i18n="section_about_title">Quién soy</h2>
       <div class="about-grid">
         <div class="about-text fade-in delay-1">
-          <p data-i18n="about_p1">Estudiante de SMR en Digitech FP Málaga con una fuerte vocación por la tecnología. Desde los 10 años he estado vinculado al desarrollo de software, formándome durante 4 años en programación.</p>
-          <p data-i18n="about_p2">Mi enfoque está en ayudar a que sitios web funcionen mejor — más rápidos, más accesibles y más efectivos. Creo en un trabajo meticuloso, con atención al detalle y comunicación clara con cada cliente.</p>
-          <p data-i18n="about_p3">Complemento mi formación con certificaciones de Cisco NetAcad y experiencia práctica en desarrollo y diagnóstico de aplicaciones web.</p>
+          <p data-i18n="about_p1">Estudiante de SMR en Digitech FP Málaga con una fuerte vocación por la tecnología. Mi enfoque está en ayudar a que sitios web funcionen mejor — más rápidos, más accesibles y más efectivos.</p>
+          <p data-i18n="about_p2">Creo en un trabajo meticuloso, con atención al detalle y comunicación clara con cada cliente. Complemento mi formación con certificaciones de Cisco NetAcad y experiencia práctica en desarrollo y diagnóstico de aplicaciones web.</p>
         </div>
         <ul class="highlights-list fade-in delay-2">
           <li>
@@ -83,10 +84,6 @@
           <li>
             <svg viewBox="0 0 24 24" fill="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span data-i18n="highlight_achievement">Finalista Nacional — ASTI Robotics Challenge 2026</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none"><polyline points="4 17 10 11 4 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="19" x2="20" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span data-i18n="highlight_started">Programando desde los 10 años · EVAD Kids (4 años)</span>
           </li>
         </ul>
       </div>
@@ -140,7 +137,47 @@
   <script src="js/main.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    I18n.init();
+    I18n.init().then(() => {
+      // Typed animation
+      const s = I18n.translations[I18n.currentLang];
+      if (!s) return;
+      const strings = [
+        s.hero_title_part1 + s.hero_title_part2 + s.hero_title_part3 + s.hero_title_part4 + s.hero_title_part5,
+        s.hero_title_part1 + s.hero_title_part2 + s.hero_title_part5
+      ];
+      const el = document.getElementById('hero-typed');
+      const highlight = el.querySelector('.highlight');
+      let i = 0, j = 0, text = strings[0], typing = true;
+
+      function tick() {
+        if (typing) {
+          if (j <= text.length) {
+            el.childNodes.forEach(n => { if (n.nodeType === 3) n.remove(); });
+            const txt = document.createTextNode(text.substring(0, j));
+            el.insertBefore(txt, highlight);
+            j++;
+            setTimeout(tick, 60);
+          } else {
+            typing = false;
+            setTimeout(tick, 2500);
+          }
+        } else {
+          if (j > 0) {
+            el.childNodes.forEach(n => { if (n.nodeType === 3) n.remove(); });
+            const txt = document.createTextNode(text.substring(0, j));
+            el.insertBefore(txt, highlight);
+            j--;
+            setTimeout(tick, 30);
+          } else {
+            typing = true;
+            i = (i + 1) % strings.length;
+            text = strings[i];
+            setTimeout(tick, 400);
+          }
+        }
+      }
+      tick();
+    });
   </script>
 </body>
 </html>

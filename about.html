@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="site_title">Rafael Gálvez Silipo — Auditoría & Desarrollo Web</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="grid-overlay"></div>
+  <div class="cursor-glow"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 19 2 12 11 5 11 19"/><polygon points="22 19 13 12 22 5 22 19"/></svg>
+      RBYHACK
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="services.html" data-i18n="nav_services">Servicios</a></li>
+      <li><a href="process.html" data-i18n="nav_process">Proceso</a></li>
+      <li><a href="about.html" data-i18n="nav_about">Sobre mí</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0.5rem;">
+      <div class="lang-switcher">
+        <button data-lang="es" class="active">ES</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+    <!-- ABOUT HERO -->
+    <section class="section" style="padding-top:6rem;">
+      <p class="section-label fade-in" data-i18n="section_about_full_label">Sobre mí</p>
+      <div class="about-hero">
+        <img src="assets/images/profile.png" alt="Rafael Gálvez Silipo" class="profile-photo fade-in delay-1">
+        <div class="about-bio fade-in delay-2">
+          <h2 data-i18n="section_about_full_title">Un poco más sobre mí</h2>
+          <p data-i18n="about_full_p1">Desde pequeño me ha apasionado la tecnología. Empecé a programar a los 10 años y pasé 4 años formándome en desarrollo de software. Esa base temprana me enseñó a pensar de forma lógica, resolver problemas complejos y construir proyectos desde cero.</p>
+          <p data-i18n="about_full_p2">Actualmente estudio SMR en Digitech FP Málaga, donde combino mi formación académica con proyectos prácticos de desarrollo y diagnóstico web. Mi objetivo es ayudar a empresas y profesionales a tener presencia digital de calidad.</p>
+          <p data-i18n="about_full_p3">Me motiva ver cómo un sitio web bien construido puede transformar un negocio. Por eso pongo el mismo nivel de detalle tanto en una landing page como en una auditoría técnica completa.</p>
+          <p data-i18n="about_full_p4">Cuando no estoy programando, me gusta participar en competencias de robótica, aprender sobre nuevas tecnologías y compartir conocimiento con la comunidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section" style="padding-top:2rem;">
+      <p class="section-label fade-in" data-i18n="section_timeline_label">Trayectoria</p>
+      <h2 class="section-title fade-in" data-i18n="section_timeline_title">Mi camino</h2>
+      <div class="timeline">
+        <div class="timeline-item fade-in delay-1">
+          <div class="timeline-year" data-i18n="timeline_1_year">2020 — 2024</div>
+          <h4 data-i18n="timeline_1_title">Desarrollo de Software</h4>
+          <p data-i18n="timeline_1_desc">Formación intensiva en programación. Desarrollo de pensamiento lógico y resolución de problemas.</p>
+        </div>
+        <div class="timeline-item fade-in delay-2">
+          <div class="timeline-year" data-i18n="timeline_2_year">2024 — Presente</div>
+          <h4 data-i18n="timeline_2_title">SMR — Digitech FP Málaga</h4>
+          <p data-i18n="timeline_2_desc">Formación en sistemas microinformáticos y redes. Especialización en desarrollo web y ciberseguridad.</p>
+        </div>
+        <div class="timeline-item fade-in delay-3">
+          <div class="timeline-year" data-i18n="timeline_3_year">2025</div>
+          <h4 data-i18n="timeline_3_title">Certificaciones Cisco NetAcad</h4>
+          <p data-i18n="timeline_3_desc">Ethical Hacker, Python, Networking, Linux. Formación práctica en entornos profesionales.</p>
+        </div>
+        <div class="timeline-item fade-in delay-4">
+          <div class="timeline-year" data-i18n="timeline_4_year">2026</div>
+          <h4 data-i18n="timeline_4_title">Finalista Nacional — ASTI Robotics</h4>
+          <p data-i18n="timeline_4_desc">Seleccionado como finalista nacional en el ASTI Robotics Challenge, compitiendo con los mejores talentos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" style="padding-top:2rem;">
+      <p class="section-label fade-in" data-i18n="section_skills_label">Skills</p>
+      <h2 class="section-title fade-in" data-i18n="section_skills_title">Tecnologías</h2>
+      <div class="skills-grid fade-in delay-1">
+        <span class="skill-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.651l5.379-1.443.744-8.157H8.531z"/></svg>
+          HTML5
+        </span>
+        <span class="skill-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm13.164 16.37l2.91-.803.683-7.598H5.775l.176 2.109h7.628l-.206 2.288-1.395.382-1.404-.384-.138-1.548H8.132l.33 4.171L12 19.65l3.535-.97z"/></svg>
+          CSS3
+        </span>
+        <span class="skill-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+          JavaScript
+        </span>
+        <span class="skill-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 11.466 9.316 19.244 12 22.307c2.684-3.083 10.02-10.903 4.976-15.03.71-3.1.402-5.571-.973-6.365-.323-.185-.696-.278-1.106-.278z"/></svg>
+          React
+        </span>
+        <span class="skill-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.25.37.33.23.45.11.45-.07.37-.25.22-.33.09-.41-.08-.41-.25-.37-.33-.22-.45-.11-.45.06zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.25.37.33.23.45.11.45-.07.37-.25.22-.33.09-.41-.08-.41-.25-.37-.33-.22-.45-.11-.45.06z"/></svg>
+          Python
+        </span>
+        <span class="skill-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.04 3.858c1.32.019 2.634.252 3.694.601.004.536-.004 1.072-.004 1.56-.682.304-1.325.682-1.925 1.15a5.22 5.22 0 0 0-1.775-.601 5.26 5.26 0 0 0-1.775.004c-.604.124-1.17.354-1.674.673-.62-.468-1.27-.846-1.97-1.22-.004-.502-.008-1.052-.004-1.596 1.068-.35 2.37-.582 3.694-.6.226 0 .452.01.678.029zm-8.224.395l.004 1.56c.7.37 1.358.794 1.97 1.26a5.35 5.35 0 0 0-.65 1.695 5.28 5.28 0 0 0-.025 1.75c.094.602.3 1.18.62 1.695-.61.462-1.27.86-1.966 1.232-.004-.5-.008-1.036-.004-1.56-.352-1.068-.582-2.37-.6-3.694a5.78 5.78 0 0 1 .03-.678c.168-1.1.412-2.09.621-2.76zm16.35.008c.209.67.453 1.664.621 2.76a5.78 5.78 0 0 1 .03.678c-.018 1.324-.248 2.626-.6 3.694-.688-.372-1.344-.77-1.946-1.232.32-.515.526-1.093.62-1.695.087-.577.079-1.163-.025-1.75a5.35 5.35 0 0 0-.65-1.695c.607-.466 1.262-.89 1.95-1.26zm-8.916 4.855c.496.005 1.001.132 1.45.38.444.248.8.586 1.04.99.245.404.37.853.37 1.305a2.45 2.45 0 0 1-.5 1.48 2.42 2.42 0 0 1-1.27.885 2.404 2.404 0 0 1-1.539-.075 2.42 2.42 0 0 1-1.005-.81 2.45 2.45 0 0 1-.5-1.48c0-.452.125-.901.37-1.305.24-.404.596-.744 1.04-.99.448-.248.953-.375 1.45-.38zm-7.815 4.22c.005.522.001 1.054-.007 1.552 1.02.355 2.26.58 3.52.602.007.536.005 1.072.005 1.552-1.262.017-2.52-.205-3.522-.602-.007-.522-.005-1.054.004-1.552v-.55c0-.334 0-.668.004-1.002h-.004zm15.384.004v.55c.008.498.008 1.03.004 1.552-1.002.397-2.262.62-3.52.602-.004-.48-.002-.952-.005-1.428l-.004-.626c1.26-.022 2.502-.248 3.525-.65z"/></svg>
+          Linux
+        </span>
+        <span class="skill-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.592 7.377c-2.365-1.806-4.463-1.857-6.117-.52l.59.77c1.405-1.11 3.139-1.08 5.148.423 1.043.78 1.71 1.244 2.239 1.48l.082.03c.006.01.073.05.073.05-.008-.003-3.281-2.547-6.354-.6-.644.41-1.185 1.033-1.45 1.618-.157.323-.167.787.107 1.264.488.825 1.53 1.45 2.58 1.65.17.6.067 1.164-.025 1.5l-.008.015c-.427-.203-1.01-.553-1.307-1.21l-.757.525c.5.85 1.37 1.354 2.28 1.577l.155.453c.127 1.08.656 1.795 1.057 2.187.26.25.442.316.586.316h.003c.216-.005.424-.145.564-.247.53-.504.81-1.113.81-1.697 0-.578-.068-1.004-.68-3.026l-.47-1.53c.394-.29.874-.523 1.327-.563h.002c.867-.07 1.657.36 2.238.988l.586-.73c-.706-.77-1.72-1.28-2.784-1.26-.514.05-.96.23-1.33.498zm-2.108 8.916c-.13.104-.24.174-.314.168-.074-.01-.1-.06-.125-.112-.27-.53-.157-1.043.238-1.573.09-.06.17-.1.256-.125l.236.79c.06.19.11.37.17.53-.155.1-.303.196-.462.32zm-2.022.905l-.287-.994c.157-.09.316-.144.467-.173.014.06.03.123.045.186l.246.842c-.182.05-.346.08-.47.138zm-2.358-1.02c-.778-.16-1.58-.6-1.937-1.207-.113-.19-.15-.52.013-.858.13-.28.325-.513.556-.685l.3.983c-.1.05-.234.144-.32.254-.028.036-.044.07-.03.096.05.12.306.24.532.3zm3.53-2.36l-.285-.966c.184-.05.353-.057.488-.02l-.004.018-.19.647zm-5.688-2.943c.318.163.733.28 1.164.418l-.22-.754c-.337-.115-.66-.244-.944-.413z"/></svg>
+          C
+        </span>
+        <span class="skill-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>
+          Tailwind
+        </span>
+        <span class="skill-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 2a7 7 0 0 0-7 7v0a7 7 0 0 0 7 7 7 7 0 0 0 7-7v0a7 7 0 0 0-7-7zM8 12l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          Ciberseguridad
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="footer_home">Inicio</a></li>
+        <li><a href="services.html" data-i18n="footer_services">Servicios</a></li>
+        <li><a href="contact.html" data-i18n="footer_contact">Contacto</a></li>
+      </ul>
+      <p>&copy; <span id="year"></span> RBYHACK. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    I18n.init();
+  </script>
+</body>
+</html>
