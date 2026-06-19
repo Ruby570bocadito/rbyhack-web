@@ -45,8 +45,8 @@
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><path d="M8 12l3 3 5-5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
       </p>
-      <h1 class="fade-in delay-1" id="hero-typed" data-sanitize>
-        <span class="highlight">.</span>
+      <h1 class="fade-in delay-1">
+        <span id="hero-typed"></span><span id="hero-cursor" class="typed-cursor">|</span><span class="highlight">.</span>
       </h1>
       <p class="fade-in delay-2" data-i18n="hero_subtitle">Ayudo a negocios y profesionales a tener una presencia web rápida, accesible y efectiva. Diagnóstico técnico, desarrollo desde cero y optimización continua.</p>
       <div class="hero-cta fade-in delay-3">
@@ -138,7 +138,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     I18n.init().then(() => {
-      // Typed animation
       const s = I18n.translations[I18n.currentLang];
       if (!s) return;
       const strings = [
@@ -146,28 +145,24 @@
         s.hero_title_part1 + s.hero_title_part2 + s.hero_title_part5
       ];
       const el = document.getElementById('hero-typed');
-      const highlight = el.querySelector('.highlight');
+      const cursor = document.getElementById('hero-cursor');
       let i = 0, j = 0, text = strings[0], typing = true;
 
       function tick() {
         if (typing) {
           if (j <= text.length) {
-            el.childNodes.forEach(n => { if (n.nodeType === 3) n.remove(); });
-            const txt = document.createTextNode(text.substring(0, j));
-            el.insertBefore(txt, highlight);
+            el.textContent = text.substring(0, j);
             j++;
-            setTimeout(tick, 60);
+            setTimeout(tick, 65);
           } else {
             typing = false;
             setTimeout(tick, 2500);
           }
         } else {
           if (j > 0) {
-            el.childNodes.forEach(n => { if (n.nodeType === 3) n.remove(); });
-            const txt = document.createTextNode(text.substring(0, j));
-            el.insertBefore(txt, highlight);
+            el.textContent = text.substring(0, j);
             j--;
-            setTimeout(tick, 30);
+            setTimeout(tick, 28);
           } else {
             typing = true;
             i = (i + 1) % strings.length;

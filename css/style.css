@@ -320,10 +320,7 @@ body:hover .cursor-glow { opacity: 1; }
 }
 
 .hero h1 .highlight {
-  background: linear-gradient(135deg, var(--accent-light), #a78bfa);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent-light);
 }
 
 .hero p {
@@ -344,14 +341,14 @@ body:hover .cursor-glow { opacity: 1; }
 
 /* Typed cursor */
 .typed-cursor {
-  color: var(--accent-light);
-  font-weight: 400;
-  animation: blink 0.8s infinite;
+  color: var(--accent);
+  font-weight: 500;
+  animation: blink 0.9s infinite;
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* ---------- BUTTONS ---------- */
