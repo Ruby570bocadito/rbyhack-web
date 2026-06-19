@@ -46,7 +46,7 @@
         </span>
       </p>
       <h1 class="fade-in delay-1">
-        <span id="hero-typed"></span><span id="hero-cursor" class="typed-cursor">|</span><span class="highlight">.</span>
+        <span id="hero-typed"></span><span id="hero-cursor" class="typed-cursor" style="display:none;">|</span><span class="highlight" style="display:none;">.</span>
       </h1>
       <p class="fade-in delay-2" data-i18n="hero_subtitle">Ayudo a negocios y profesionales a tener una presencia web rápida, accesible y efectiva. Diagnóstico técnico, desarrollo desde cero y optimización continua.</p>
       <div class="hero-cta fade-in delay-3">
@@ -146,6 +146,9 @@
       ];
       const el = document.getElementById('hero-typed');
       const cursor = document.getElementById('hero-cursor');
+      const dot = document.querySelector('.highlight');
+      cursor.style.display = 'inline';
+      dot.style.display = 'inline';
       let i = 0, j = 0, text = strings[0], typing = true;
 
       function tick() {
